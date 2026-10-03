@@ -1,0 +1,10 @@
+1 29.99 50 Laptop
+2 49.99 30 Wireless Mouse
+3 19.99 100 USB Cable
+4 9.99 200 Pen
+5 14.99 75 Notebook
+6 39.99 25 Mechanical Keyboard
+7 89.99 15 Monitor
+8 5.99 500 Paper Clips
+9 24.99 60 Phone Case
+10 59.99 40 Headphones
