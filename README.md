@@ -80,7 +80,7 @@ cmake --build . --config Release
 Run the executable:
 
 ```powershell
-.uild\Release\KursovaCPP.exe
+.\build\Release\KursovaCPP.exe
 ```
 
 You can also open the generated solution file in the `build` folder with Visual Studio.
@@ -97,16 +97,7 @@ cmake --build .
 Run the executable:
 
 ```powershell
-.
-KursovaCPP.exe
-```
-
-Or from the `build` folder:
-
-```powershell
-cd build
-.
-KursovaCPP.exe
+.\KursovaCPP.exe
 ```
 
 If `cmake` does not recognize the compiler, verify that `g++` is installed:
