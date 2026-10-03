@@ -20,27 +20,27 @@ git clone https://github.com/Layer2686/Coursework-Object-Oriented-Program-Shop-.
 cd Coursework-Object-Oriented-Program-Shop-
 ```
 
-## 2. Configure and build
+## 2. Build the project
 
 ### Linux
 
 ```bash
-mkdir build
+mkdir -p build
 cd build
 cmake ..
 cmake --build .
 ```
 
-Run the program:
+Run the executable:
 
 ```bash
 ./KursovaCPP
 ```
 
-If you want a Release build:
+For a Release build:
 
 ```bash
-cmake -S .. -B . -DCMAKE_BUILD_TYPE=Release
+cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 ./KursovaCPP
 ```
@@ -48,13 +48,13 @@ cmake --build .
 ### macOS
 
 ```bash
-mkdir build
+mkdir -p build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 ```
 
-Run the program:
+Run the executable:
 
 ```bash
 ./KursovaCPP
@@ -68,7 +68,7 @@ xcode-select --install
 
 ### Windows (Visual Studio)
 
-Open PowerShell or Command Prompt in the project folder and run:
+From the project root:
 
 ```powershell
 mkdir build
@@ -77,19 +77,13 @@ cmake .. -G "Visual Studio 17 2022"
 cmake --build . --config Release
 ```
 
-Then run the executable:
+Run the executable:
 
 ```powershell
-.uildineleaseuildeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseeleaseelease\KursovaCPP.exe
+.uild\Release\KursovaCPP.exe
 ```
 
-If the path differs in your environment, you can also start the app from the generated Visual Studio solution:
-
-```powershell
-cmake --open build
-```
-
-or simply use the generated `.sln` file in the `build` directory.
+You can also open the generated solution file in the `build` folder with Visual Studio.
 
 ### Windows (MinGW / GCC)
 
@@ -100,37 +94,45 @@ cmake .. -G "MinGW Makefiles"
 cmake --build .
 ```
 
-Run:
+Run the executable:
 
 ```powershell
 .
 KursovaCPP.exe
 ```
 
-If `cmake` does not recognize the compiler, install the build tools and make sure `g++` is available:
+Or from the `build` folder:
+
+```powershell
+cd build
+.
+KursovaCPP.exe
+```
+
+If `cmake` does not recognize the compiler, verify that `g++` is installed:
 
 ```powershell
 g++ --version
 ```
 
-## 3. Optional: build with Ninja
+### Windows / Linux / macOS with Ninja
 
 ```bash
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 ```
 
-## 4. Troubleshooting
+## 3. Troubleshooting
 
 - If CMake reports a version error, install CMake 3.30 or newer.
 - If the compiler is not found, install the required toolchain:
   - Ubuntu/Debian: `sudo apt install build-essential cmake`
   - Fedora: `sudo dnf install gcc-c++ cmake`
   - macOS: `brew install cmake`
-  - Windows: install Visual Studio 2022 with C++ workload or MinGW
-- If the project does not build, check that you are in the repository root and that `CMakeLists.txt` is present.
+  - Windows: install Visual Studio 2022 with the C++ workload or MinGW
+- If the project does not build, make sure you are in the repository root and that `CMakeLists.txt` is present.
 
-## 5. Project output
+## 4. Project output
 
 The executable target is named:
 
